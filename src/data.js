@@ -123,7 +123,7 @@ export const projects = [
     title: "Article Scientifique sur LLM",
     shortDescription: "Rédaction et contribution à un article scientifique détaillant les approches et résultats de l'utilisation de LLMs pour l'analyse comportementale.",
     tags: ["Rédaction Scientifique", "LLM", "Data Science", "Publication"],
-     imageUrl: "https://via.placeholder.com/300x200/dc3545/ffffff?text=Research+Paper", // Placeholder
+     imageUrl: "https://via.placeholder.com/300x200/dc3545/ffffff?text=Research+Paper", 
   },
 ];
 

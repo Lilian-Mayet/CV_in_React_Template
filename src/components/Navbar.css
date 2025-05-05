@@ -1,0 +1,82 @@
+/* src/components/Navbar.css */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 1px solid transparent; /* Initially transparent border */
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     border-bottom: 1px solid var(--border-light);
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+  }
+  
+  .navbar-logo {
+    color: var(--text-dark);
+    justify-self: flex-start;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .navbar-item {
+    height: 70px;
+  }
+  
+  .navbar-link {
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .navbar-link:hover,
+  .navbar-link.active { /* Add active class logic with JS if needed */
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+  }
+  
+  /* Add styles for mobile menu toggle if needed */
+  @media screen and (max-width: 960px) {
+      .navbar-menu {
+          /* Styles to hide menu and show burger icon */
+          display: none;
+      }
+       /* Add burger menu styles */
+  }

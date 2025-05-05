@@ -1,38 +1,136 @@
-.App {
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #6c757d; /* Gray */
+  --background-light: #f8f9fa;
+  --background-dark: #343a40;
+  --text-light: #f8f9fa;
+  --text-dark: #212529;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --border-light: #dee2e6;
+  --font-family: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.7;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+main {
+  padding-top: 70px; /* Adjust based on Navbar height */
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section:nth-child(odd) {
+ /* background-color: #fdfdfd; /* Slightly different background for visual separation */
+}
+
+
+h1, h2, h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.5rem;
   text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Underline effect for section titles */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+ul {
+  list-style: none;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.tags {
+  margin-top: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.tag {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Basic Responsive */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  section {
+    padding: 40px 15px;
+  }
+   main {
+    padding-top: 60px; /* Adjust if navbar shrinks */
   }
 }
