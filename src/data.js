@@ -36,7 +36,7 @@ export const contactInfo = {
   phone: { text: '06 15 29 07 33', icon: <FaPhone />, link: 'tel:+33615290733' },
   email: { text: 'Mayetlilian@gmail.com', icon: <FaEnvelope />, link: 'mailto:Mayetlilian@gmail.com' },
   linkedin: { text: 'Lilian Mayet', icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/lilian-mayet/' }, // Replace with actual LinkedIn URL
-  // github: { text: 'lilian-m', icon: <FaGithub />, link: 'https://github.com/...' } // Add GitHub if available
+   github: { text: 'lilian-m', icon: <FaGithub />, link: 'https://github.com/...' } // Add GitHub if available
 };
 
 export const about = {
@@ -130,32 +130,94 @@ export const skills = {
 
 export const projects = [
   {
-    id: 'proj-gen-ai',
+    id: 'proj-gen-ai', // Keep this ID unique
     title: "Générateur Audio/Image IA",
     shortDescription: "Exploration de différents algorithmes d'IA générative pour créer du contenu audio et visuel original.",
-    tags: ["IA Générative", "Python", "Pytorch", "Audio", "Image"],
-    imageUrl: "https://via.placeholder.com/300x200/007bff/ffffff?text=Generative+AI", // Placeholder
+    longDescription: "Ce projet personnel visait à explorer les capacités des modèles d'IA générative modernes. J'ai expérimenté avec des architectures comme les GANs et les Transformers pour la génération d'images et de courtes séquences audio, en me concentrant sur la compréhension des hyperparamètres et l'évaluation de la qualité des sorties.",
+    imageUrl: "https://via.placeholder.com/350x250/007bff/ffffff?text=Generative+AI", // Thumbnail
+    imageUrlLarge: "https://via.placeholder.com/800x450/007bff/ffffff?text=Generative+AI+Detail", // Larger image for detail page
+    date: "Mars 2024 - Mai 2024",
+    context: "Projet personnel de veille technologique et d'apprentissage autodidacte.",
+    technologies: ["Python", "PyTorch", "Librosa (Audio)", "Matplotlib", "Jupyter Notebook", "Git"],
+    tags: ["IA Générative", "Python", "Pytorch", "Audio", "Image", "Deep Learning"],
+    strengths: [
+        "Compréhension approfondie des défis de l'IA générative.",
+        "Mise en œuvre de plusieurs architectures de modèles.",
+        "Analyse qualitative des résultats générés."
+    ],
+    futureImprovements: [
+        "Explorer des modèles de diffusion (Diffusion Models).",
+        "Améliorer le contrôle sur les générations (guidage par texte).",
+        "Créer une interface utilisateur simple pour tester les modèles."
+    ],
+    // githubLink: "#", // Add actual link if available
+    // liveDemoLink: "#", // Add actual link if available
   },
   {
     id: 'proj-search-engine',
     title: "Moteur de Recherche Sémantique",
     shortDescription: "Développement d'un moteur de recherche basé sur les embeddings pour trouver des informations pertinentes par similarité sémantique.",
-    tags: ["NLP", "Embeddings", "Python", "Vector Database", "API"],
-     imageUrl: "https://via.placeholder.com/300x200/28a745/ffffff?text=Semantic+Search", // Placeholder
+    longDescription: "Fatigué des recherches par mots-clés traditionnelles, j'ai construit un prototype de moteur de recherche utilisant des embeddings de phrases (Sentence Transformers) pour comprendre le sens des requêtes et des documents. Il permet de trouver des documents similaires même s'ils ne partagent pas exactement les mêmes mots.",
+    imageUrl: "https://via.placeholder.com/350x250/28a745/ffffff?text=Semantic+Search",
+    imageUrlLarge: "https://via.placeholder.com/800x450/28a745/ffffff?text=Semantic+Search+Detail",
+    date: "Décembre 2023 - Février 2024",
+    context: "Projet universitaire en groupe (Traitement Automatique du Langage Naturel).",
+    technologies: ["Python", "Sentence Transformers", "FAISS (Vector Index)", "Flask (API)", "React (Frontend basique)", "Docker"],
+    tags: ["NLP", "Embeddings", "Python", "Vector Database", "API", "Recherche"],
+    strengths: [
+        "Indexation et recherche vectorielle rapides.",
+        "API simple pour l'intégration.",
+        "Pertinence des résultats améliorée par rapport aux mots-clés seuls."
+    ],
+    futureImprovements: [
+        "Intégrer des modèles d'embeddings plus larges et récents.",
+        "Optimiser l'indexation pour des datasets plus volumineux.",
+        "Ajouter des fonctionnalités de filtrage avancées."
+    ],
+     // githubLink: "#",
   },
   {
     id: 'proj-smart-city-viz',
     title: "Visualisation Trafic Urbain",
     shortDescription: "Création d'une interface de visualisation interactive pour analyser les données simulées de trafic issues du projet Smart City.",
-    tags: ["Data Visualisation", "JavaScript", "React", "Simulation", "API"],
-     imageUrl: "https://via.placeholder.com/300x200/ffc107/000000?text=City+Viz", // Placeholder
+    longDescription: "Dans le cadre de mon alternance chez NVIDIA, un besoin est apparu pour visualiser et analyser les données massives générées par la simulation de trafic urbain. J'ai développé une interface web interactive utilisant React et une librairie de data visualisation pour afficher les flux de trafic, les points de congestion et d'autres métriques clés sur une carte.",
+    imageUrl: "https://via.placeholder.com/350x250/ffc107/000000?text=City+Viz",
+     imageUrlLarge: "https://via.placeholder.com/800x450/ffc107/000000?text=City+Viz+Detail",
+    date: "En cours (depuis Avril 2024)",
+    context: "Projet interne lié à l'alternance chez NVIDIA (Projet Smart City).",
+    technologies: ["React", "JavaScript", "Deck.gl / Mapbox GL JS", "API REST", "CSS Modules", "Node.js (pour un serveur mock)"],
+    tags: ["Data Visualisation", "JavaScript", "React", "Simulation", "API", "Frontend"],
+    strengths: [
+        "Interface utilisateur intuitive et réactive.",
+        "Capacité à gérer et afficher de grands volumes de données géospatiales.",
+        "Intégration facile avec l'API de données de simulation."
+    ],
+    futureImprovements: [
+        "Ajouter des options de comparaison temporelle.",
+        "Intégrer des analyses statistiques directement dans l'interface.",
+        "Optimiser les performances de rendu pour des simulations encore plus grandes."
+    ],
   },
    {
     id: 'proj-article-llm',
     title: "Article Scientifique sur LLM",
     shortDescription: "Rédaction et contribution à un article scientifique détaillant les approches et résultats de l'utilisation de LLMs pour l'analyse comportementale.",
-    tags: ["Rédaction Scientifique", "LLM", "Data Science", "Publication"],
-     imageUrl: "https://via.placeholder.com/300x200/dc3545/ffffff?text=Research+Paper", 
+    longDescription: "Suite aux travaux menés chez Capgemini Engineering sur l'analyse du comportement conducteur via LLM, nous avons formalisé nos méthodes, expériences et résultats dans un article scientifique. J'ai participé activement à la rédaction, à la génération des graphiques et à la mise en forme selon les standards de publication.",
+    imageUrl: "https://via.placeholder.com/350x250/dc3545/ffffff?text=Research+Paper",
+    imageUrlLarge: "https://via.placeholder.com/800x450/dc3545/ffffff?text=Research+Paper+Detail",
+    date: "Juin 2024 - Juillet 2024",
+    context: "Valorisation scientifique des travaux R&D menés durant l'alternance chez Capgemini Engineering.",
+    technologies: ["Latex", "Python (pour figures)", "LLMs (concepts)", "Méthodologie Scientifique", "Git"],
+    tags: ["Rédaction Scientifique", "LLM", "Data Science", "Publication", "Communication"],
+    strengths: [
+        "Formalisation claire d'une approche technique complexe.",
+        "Production de figures et tableaux de qualité.",
+        "Respect des contraintes de formatage et de soumission."
+    ],
+    futureImprovements: [
+        "Présenter les travaux lors d'une conférence.",
+        "Explorer les retours des relecteurs (si soumis) pour améliorer l'article.",
+    ],
   },
 ];
 

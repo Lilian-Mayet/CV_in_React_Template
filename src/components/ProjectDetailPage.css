@@ -1,0 +1,259 @@
+/* src/components/ProjectDetailPage.css */
+.project-detail-page {
+    padding: 40px 20px; /* Less padding than main sections */
+    background-color: var(--card-bg); /* White background */
+    min-height: calc(100vh - 70px); /* Ensure it takes full height minus navbar */
+  }
+  
+  .project-detail-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    color: var(--primary-color);
+  }
+  
+  .back-button svg {
+      margin-bottom: -2px; /* Align icon better */
+  }
+  
+  
+  .project-detail-page h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 15px;
+  }
+  
+  .project-detail-main-content {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 40px;
+      align-items: flex-start; /* Align items at the top */
+  }
+  
+  .project-detail-image-container {
+      flex: 2; /* Take more space */
+      max-width: 65%;
+  }
+  
+  .project-detail-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .project-detail-info {
+      flex: 1; /* Take less space */
+      background-color: #f8f9fa; /* Slight background */
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid var(--border-light);
+  }
+  
+  .info-item {
+      margin-bottom: 20px;
+  }
+  
+  .info-item h3 {
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  }
+  .info-item h3 svg {
+      font-size: 1rem; /* Smaller icon */
+      opacity: 0.8;
+  }
+  
+  
+  .info-item p {
+      font-size: 0.95rem;
+      color: var(--secondary-color);
+      line-height: 1.6;
+  }
+  
+  .project-link-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-right: 10px;
+      margin-top: 10px;
+      font-size: 0.9rem;
+  }
+  
+  .project-link-button.github {
+      background-color: #333;
+      color: white;
+  }
+  .project-link-button.github:hover {
+      background-color: #555;
+      transform: translateY(-2px);
+  }
+  
+  .project-link-button.live {
+      background-color: var(--primary-color);
+      color: white;
+  }
+  .project-link-button.live:hover {
+      background-color: #0056b3;
+       transform: translateY(-2px);
+  }
+  
+  
+  .project-detail-description {
+      margin-bottom: 40px;
+      max-width: 900px; /* Limit width for readability */
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .project-detail-description h2 {
+      font-size: 1.6rem;
+      color: var(--text-dark);
+      margin-bottom: 15px;
+      text-align: left; /* Override centered h2 */
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block; /* Underline only the text */
+  }
+  .project-detail-description h2::after {
+      display: none; /* Remove global underline */
+  }
+  
+  .project-detail-description p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--secondary-color);
+  }
+  
+  .project-detail-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .detail-column {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+  }
+  
+  .detail-column h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+  }
+  .detail-column h3 svg {
+      font-size: 1.1rem;
+      opacity: 0.8;
+  }
+  
+  
+  .detail-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .detail-column li {
+    font-size: 0.95rem;
+    color: #495057;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .detail-column li::before {
+    content: '▹'; /* Custom bullet */
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .project-contact-cta {
+      background-color: var(--background-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 40px 30px;
+      border-radius: 8px;
+      margin-top: 40px;
+  }
+  .project-contact-cta h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+       color: var(--text-light);
+  }
+  .project-contact-cta p {
+      margin-bottom: 25px;
+      color: #adb5bd;
+  }
+  
+  
+  /* Not Found Specific Styles */
+  .project-detail-page.not-found {
+      text-align: center;
+      padding-top: 80px;
+  }
+  .project-detail-page.not-found h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+  }
+  .project-detail-page.not-found p {
+      color: var(--secondary-color);
+      margin-bottom: 30px;
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+      .project-detail-main-content {
+          flex-direction: column;
+          align-items: center; /* Center items when stacked */
+      }
+       .project-detail-image-container {
+          flex: none; /* Reset flex */
+          max-width: 80%; /* Allow image to be wider */
+          margin-bottom: 30px;
+       }
+        .project-detail-info {
+          flex: none; /* Reset flex */
+          width: 100%;
+          max-width: 600px; /* Limit info width */
+       }
+  }
+  
+  
+  @media (max-width: 768px) {
+     .project-detail-page h1 { font-size: 2.2rem; }
+     .project-detail-image-container { max-width: 100%; }
+     .project-detail-columns { grid-template-columns: 1fr; } /* Stack columns */
+  }

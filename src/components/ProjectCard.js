@@ -1,19 +1,16 @@
 // src/components/ProjectCard.js
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import './ProjectCard.css';
 
 const ProjectCard = ({ project }) => {
 
-  // Placeholder function for "Voir plus"
-  const handleSeeMore = (projectId, projectTitle) => {
-    alert(`Redirection vers la page du projet : ${projectTitle} (ID: ${projectId})\n(Implémentation future avec React Router)`);
-    // In a real app, you would use navigation here:
-    // navigate(`/projects/${projectId}`);
-  };
-
   return (
     <div className="project-card">
-      <img src={project.imageUrl || 'https://via.placeholder.com/300x200/cccccc/ffffff?text=Projet'} alt={project.title} className="project-image" />
+      {/* Wrap image in Link as well (optional) */}
+      <Link to={`/project/${project.id}`}>
+        <img src={project.imageUrl || 'https://via.placeholder.com/300x200/cccccc/ffffff?text=Projet'} alt={project.title} className="project-image" />
+      </Link>
       <div className="project-info">
         <h3>{project.title}</h3>
         <p>{project.shortDescription}</p>
@@ -24,13 +21,14 @@ const ProjectCard = ({ project }) => {
             ))}
           </div>
         )}
-         <button
-            onClick={() => handleSeeMore(project.id, project.title)}
+         {/* Use Link component styled as a button */}
+         <Link
+            to={`/project/${project.id}`} // Navigate to the specific project route
             className="project-button"
             aria-label={`Voir plus sur le projet ${project.title}`}
         >
             Voir plus
-         </button>
+         </Link>
       </div>
     </div>
   );
