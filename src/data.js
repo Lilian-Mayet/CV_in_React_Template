@@ -103,13 +103,24 @@ export const skills = {
   programming: {
     title: "Programmation",
     items: ["Python", "Java", "JavaScript", "C", "C#", "SQL", "PHP", "HTML", "CSS"],
-    // Corrected icon usage:
-    icons: [ <FaPython key="py"/>, <FaJava key="java"/>, <FaJsSquare key="js"/>, <FaHtml5 key="html"/>, <FaCss3Alt key="css"/>, <DiCsharp key="csharp" /> ]
+    icons: [
+      <FaPython key="py" />,
+      <FaJava key="java" />,
+      <FaJsSquare key="js" />,
+      <FaHtml5 key="html" />,
+      <FaCss3Alt key="css" />,
+      <FaCode key="csharp" />, // Updated icon for C#
+    ],
   },
   tools: {
     title: "Outils & Logiciels",
     items: ["PyTorch", "TensorFlow", "Jupyter Notebook", "PowerBI", "Git", "Docker", "Excel", "PowerPoint/Canvas"],
-     icons: [ <SiPytorch key="pt2"/>, <SiTensorflow key="tf2"/>, <SiJupyter key="jupyter"/>, <SiPowerbi key="pbi"/> ]
+    icons: [
+      <SiPytorch key="pt2" />,
+      <SiTensorflow key="tf2" />,
+      <SiJupyter key="jupyter" />,
+      <FaChartBar key="pbi" />, // Updated icon for Power BI
+    ],
   },
   languages: {
       title: "Langues",
