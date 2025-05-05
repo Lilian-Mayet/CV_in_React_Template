@@ -26,6 +26,7 @@ import { MdAnalytics } from 'react-icons/md'; // Optional alternative for Power 
 import profilePic from './assets/profile.jpg'; // Make sure you have this image
 import edutrackAiImage from './assets/edutrackAI_IMG.png'; 
 import semanticWebImage from './assets/WebBrowser.jpg'; 
+import neuralNetImage from './assets/neuralNet.png'; 
 
 export const profile = {
   name: "Lilian Mayet",
@@ -199,7 +200,8 @@ export const projects = [
         "Implémentation complète de l’algorithme d’optimisation des connexions dynamiques.",
         "Évaluation expérimentale sur benchmarks standards (CIFAR-10, IMDB…).",
         "Soumission d’un article de recherche à une conférence IA (NeurIPS, ICLR…)."
-    ]
+    ],
+    githubLink: "https://github.com/Lilian-Mayet/Enriched-Neural-Network-Research",
 },
 
    {
