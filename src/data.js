@@ -40,8 +40,8 @@ export const contactInfo = {
 };
 
 export const about = {
-  summary: "Passionné par l'intelligence artificielle et le développement, je suis un étudiant ingénieur dynamique avec un excellent sens du contact et de solides compétences techniques en data science et machine learning, acquises au travers de projets académiques et professionnels stimulants.",
-  detailed: "Actuellement en alternance chez NVIDIA et étudiant à l'ISEP, je cherche constamment à approfondir mes connaissances en IA, notamment sur les LLMs, la simulation et l'optimisation. Mon parcours m'a permis de développer une forte capacité d'adaptation, un esprit d'équipe et une rigueur dans la validation de modèles et le développement d'applications concrètes."
+  summary: "Passionné par la Data Science et spécialisé en R&D, ma force réside dans ma compréhension approfondie du fonctionnement intrinsèque des algorithmes d'IA. Cette expertise me permet d'adapter et d'intégrer efficacement ces technologies à vos projets. Fort de mes expériences concrètes avec NVIDIA et Capgemini sur des simulations virtuelles réalistes et des systèmes intelligents d'aide à la conduite, je suis constamment à la recherche de solutions créatives et innovantes",
+  detailed: "Rigoureux, créatif et communicant, je suis à votre disposition pour transformer vos défis techniques en réalisations concrètes.Contactez-moi pour concrétiser ensemble vos projets."
 };
 
 export const experiences = [
