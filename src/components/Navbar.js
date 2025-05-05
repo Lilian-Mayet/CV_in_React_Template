@@ -1,30 +1,44 @@
 // src/components/Navbar.js
 import React, { useState, useEffect } from 'react';
-import './Navbar.css'; // We'll create this CSS file
+
+import { HashLink } from 'react-router-hash-link'; // <--- Import HashLink
+import './Navbar.css';
+
 
 const Navbar = () => {
+
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <a href="#hero" className="navbar-logo">Lilian Mayet</a>
+        {/* Use HashLink for the logo to always go to top of home */}
+        <HashLink smooth to="/#hero" className="navbar-logo">
+            Lilian Mayet
+        </HashLink>
         <ul className="navbar-menu">
-          <li className="navbar-item"><a href="#about" className="navbar-link">À Propos</a></li>
-          <li className="navbar-item"><a href="#experience" className="navbar-link">Expérience</a></li>
-          <li className="navbar-item"><a href="#skills" className="navbar-link">Compétences</a></li>
-          <li className="navbar-item"><a href="#projects" className="navbar-link">Projets</a></li>
-          <li className="navbar-item"><a href="#education" className="navbar-link">Éducation</a></li>
-          <li className="navbar-item"><a href="#contact" className="navbar-link">Contact</a></li>
+           {/* Replace <a> or <Link> with <HashLink> */}
+           {/* Add smooth prop for smooth scrolling */}
+           {/* Add the leading '/' before the hash */}
+          <li className="navbar-item"><HashLink smooth to="/#about" className="navbar-link">{('About')}</HashLink></li>
+          <li className="navbar-item"><HashLink smooth to="/#experience" className="navbar-link">{('Experience')}</HashLink></li>
+          <li className="navbar-item"><HashLink smooth to="/#skills" className="navbar-link">{('Skills')}</HashLink></li>
+          <li className="navbar-item"><HashLink smooth to="/#projects" className="navbar-link">{('Projects')}</HashLink></li>
+          <li className="navbar-item"><HashLink smooth to="/#education" className="navbar-link">{('Education')}</HashLink></li>
+          <li className="navbar-item"><HashLink smooth to="/#contact" className="navbar-link">{('Contact')}</HashLink></li>
         </ul>
+        <div className="language-switcher">
+          {/* Buttons remain the same */}
+
+        </div>
       </div>
     </nav>
   );
