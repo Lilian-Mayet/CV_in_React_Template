@@ -1,0 +1,97 @@
+/* src/components/Education.css */
+.education-section {
+    /* Keep default background or set one like background-light */
+    background-color: #ffffff; /* Example: white background */
+  }
+  
+  .education-list {
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  /* Optional: Add a timeline bar */
+  .education-list::before {
+      content: '';
+      position: absolute;
+      left: 20px; /* Adjust position */
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: #e9ecef; /* Light grey timeline bar */
+      border-radius: 2px;
+       z-index: 1;
+  }
+  
+  
+  .education-item {
+    background-color: var(--card-bg);
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    position: relative; /* For timeline pseudo-elements */
+     margin-left: 50px; /* Space for the timeline */
+     border-left: 5px solid var(--primary-color); /* Accent border */
+     z-index: 2;
+  }
+  
+  /* Optional: Timeline dot */
+  .education-item::before {
+      content: '';
+      position: absolute;
+      left: -33px; /* Position relative to the item's left border */
+      top: 30px; /* Align vertically */
+      width: 12px;
+      height: 12px;
+      background-color: var(--primary-color);
+      border: 3px solid var(--card-bg); /* Match background */
+      border-radius: 50%;
+      z-index: 3; /* Above the main timeline bar */
+  }
+  
+  
+  .education-item h3 {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+  }
+  
+  .education-item .school {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color); /* Accent color for school */
+    margin-bottom: 5px;
+  }
+  
+  .education-item .years {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  .education-item .description {
+    font-size: 0.95rem;
+    color: #495057; /* Slightly darker than secondary */
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+      .education-list::before {
+          left: 10px; /* Move timeline bar */
+      }
+       .education-item {
+          margin-left: 30px; /* Adjust spacing */
+          padding: 20px;
+       }
+        .education-item::before {
+          left: -26px; /* Adjust dot position */
+          top: 25px;
+       }
+  }
+  
+  @media (max-width: 500px) {
+       .education-item h3 { font-size: 1.2rem; }
+  }

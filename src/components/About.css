@@ -1,0 +1,51 @@
+/* src/components/About.css */
+.about-section {
+    background-color: var(--card-bg); /* White background for contrast */
+    padding: 80px 40px; /* More padding for a distinct section */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05); /* Subtle shadow */
+    margin-top: -50px; /* Overlap slightly with hero or previous section if desired */
+    position: relative; /* Needed for overlap */
+    z-index: 10; /* Ensure it's above gradient backgrounds */
+  }
+  
+  .about-content {
+    max-width: 800px; /* Limit content width for readability */
+    margin: 0 auto; /* Center the content */
+    text-align: center;
+  }
+  
+  .about-content .summary {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color); /* Use accent color for summary */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    color: var(--secondary-color); /* Slightly lighter text for details */
+    line-height: 1.8;
+  }
+  
+  /* Optional: Style for an image/graphic if you add one */
+  .about-graphic {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 2rem auto;
+      /* Add styling for the graphic */
+  }
+  
+  @media (max-width: 768px) {
+      .about-section {
+          padding: 60px 20px;
+          margin-top: 0; /* Remove overlap on smaller screens */
+      }
+       .about-content .summary {
+          font-size: 1.1rem;
+       }
+       .about-content p {
+          font-size: 0.95rem;
+       }
+  }

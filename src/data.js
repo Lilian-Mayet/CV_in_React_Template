@@ -1,7 +1,27 @@
 // src/data.js
-import { FaPython, FaJava, FaJsSquare, FaReact, FaHtml5, FaCss3Alt, FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa'; // Example icons
-import { SiTensorflow, SiPytorch, SiGooglegemini, SiCsharp, SiPowerbi, SiJupyter } from "react-icons/si"; // More specific icons
+import {
+  FaPython,
+  FaJava,
+  FaJsSquare,
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaPhone,
+  FaChartBar, // Added as an alternative for Power BI
+  FaCode,     // Added as an alternative for C#
+} from 'react-icons/fa';
 
+import {
+  SiTensorflow,
+  SiPytorch,
+  SiGooglegemini,
+  SiJupyter,
+} from 'react-icons/si';
+
+import { MdAnalytics } from 'react-icons/md'; // Optional alternative for Power BI
 // Replace with actual path to Lilian's photo
 import profilePic from './assets/profile.jpg'; // Make sure you have this image
 
@@ -83,7 +103,8 @@ export const skills = {
   programming: {
     title: "Programmation",
     items: ["Python", "Java", "JavaScript", "C", "C#", "SQL", "PHP", "HTML", "CSS"],
-    icons: [ <FaPython key="py"/>, <FaJava key="java"/>, <FaJsSquare key="js"/>, <FaHtml5 key="html"/>, <FaCss3Alt key="css"/>, <SiCsharp key="csharp" /> ]
+    // Corrected icon usage:
+    icons: [ <FaPython key="py"/>, <FaJava key="java"/>, <FaJsSquare key="js"/>, <FaHtml5 key="html"/>, <FaCss3Alt key="css"/>, <DiCsharp key="csharp" /> ]
   },
   tools: {
     title: "Outils & Logiciels",

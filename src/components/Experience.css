@@ -1,0 +1,188 @@
+/* src/components/Experience.css */
+.experience-section {
+    background-color: var(--background-light); /* Or keep transparent */
+}
+
+.experience-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Central timeline bar */
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #e0e0e0; /* Light grey timeline bar */
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin-bottom: 40px;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+
+/* Position items on either side */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  padding-right: 60px; /* Space from center */
+   text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+   padding-left: 60px; /* Space from center */
+   text-align: left;
+}
+
+/* Timeline dots */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary-color);
+  border: 4px solid var(--background-light); /* Match section background */
+  top: 20px; /* Adjust vertical alignment */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+  right: -8px; /* Position dot on the line */
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -8px; /* Position dot on the line */
+}
+
+.timeline-content {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  position: relative; /* For arrow */
+}
+
+/* Arrow pointing to timeline */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -15px; /* Point right */
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent var(--card-bg);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -15px; /* Point left */
+    border-width: 10px 15px 10px 0;
+    border-color: transparent var(--card-bg) transparent transparent;
+}
+
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.timeline-content .company {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.timeline-content .years {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.timeline-content ul {
+  list-style: disc; /* Use standard bullets */
+  padding-left: 20px;
+  margin-bottom: 15px;
+  text-align: left; /* Ensure list text aligns left */
+}
+
+.timeline-content li {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.timeline-content .tags {
+   justify-content: flex-start; /* Align tags left */
+}
+
+.timeline-item:nth-child(odd) .tags {
+    justify-content: flex-end; /* Align tags right for odd items */
+}
+
+
+/* Responsive adjustments for timeline */
+@media (max-width: 900px) {
+  .experience-timeline::before {
+    left: 30px; /* Move line to the left */
+    transform: translateX(0);
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px; /* Space for content */
+    padding-right: 20px;
+    left: 0 !important; /* Reset horizontal positioning */
+     text-align: left !important; /* Force left align */
+  }
+   .timeline-item:nth-child(odd),
+   .timeline-item:nth-child(even) {
+       left: 0;
+       padding-left: 70px;
+       padding-right: 20px;
+       text-align: left;
+   }
+
+  .timeline-item::after {
+    left: 22px !important; /* Position dot on the left line */
+     right: auto; /* Remove right positioning */
+  }
+
+  .timeline-content::before {
+    left: -15px !important; /* Point left */
+    right: auto;
+    border-width: 10px 15px 10px 0 !important;
+    border-color: transparent var(--card-bg) transparent transparent !important;
+  }
+   .timeline-item:nth-child(odd) .tags,
+   .timeline-item:nth-child(even) .tags {
+     justify-content: flex-start; /* Align all tags left */
+   }
+}
+
+@media (max-width: 600px) {
+  .experience-timeline::before { left: 15px; }
+  .timeline-item { padding-left: 55px; padding-right: 10px;}
+  .timeline-item::after { left: 7px; width: 14px; height: 14px; }
+  .timeline-content { padding: 20px; }
+  .timeline-content::before { display: none; } /* Hide arrow on very small screens */
+}
