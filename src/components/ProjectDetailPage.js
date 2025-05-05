@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom'; // Import Link
 import { projects, contactInfo } from '../data'; // Assuming contact info might be useful too
 import './ProjectDetailPage.css';
-import { FaArrowLeft, FaGithub, FaExternalLinkAlt, FaTools, FaLightbulb, FaChartLine, FaCalendarAlt } from 'react-icons/fa'; // Example icons
+import { FaArrowLeft, FaGithub, FaExternalLinkAlt, FaTools, FaLightbulb, FaChartLine, FaCalendarAlt,FaDumbbell } from 'react-icons/fa'; // Example icons
 
 const ProjectDetailPage = () => {
   const { projectId } = useParams(); // Get the project ID from the URL
@@ -74,7 +74,7 @@ const ProjectDetailPage = () => {
             </ul>
           </div>
           <div className="detail-column">
-             <h3><FaChartLine/> Points Forts</h3>
+             <h3><FaDumbbell/> Points Forts</h3>
                 <ul>
                 {project.strengths?.map((strength, index) => (
                     <li key={index}>{strength}</li>

@@ -24,6 +24,8 @@ import {
 import { MdAnalytics } from 'react-icons/md'; // Optional alternative for Power BI
 // Replace with actual path to Lilian's photo
 import profilePic from './assets/profile.jpg'; // Make sure you have this image
+import edutrackAiImage from './assets/edutrackAI_IMG.png'; 
+import semanticWebImage from './assets/WebBrowser.jpg'; 
 
 export const profile = {
   name: "Lilian Mayet",
@@ -35,8 +37,8 @@ export const profile = {
 export const contactInfo = {
   phone: { text: '06 15 29 07 33', icon: <FaPhone />, link: 'tel:+33615290733' },
   email: { text: 'Mayetlilian@gmail.com', icon: <FaEnvelope />, link: 'mailto:Mayetlilian@gmail.com' },
-  linkedin: { text: 'Lilian Mayet', icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/lilian-mayet/' }, // Replace with actual LinkedIn URL
-   github: { text: 'lilian-m', icon: <FaGithub />, link: 'https://github.com/...' } // Add GitHub if available
+  linkedin: { text: 'Lilian Mayet', icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/lilian-mayet-88b407219' }, 
+   github: { text: 'lilian-m', icon: <FaGithub />, link: 'https://github.com/Lilian-Mayet' } 
 };
 
 export const about = {
@@ -130,74 +132,76 @@ export const skills = {
 
 export const projects = [
   {
-    id: 'proj-gen-ai', // Keep this ID unique
-    title: "Générateur Audio/Image IA",
-    shortDescription: "Exploration de différents algorithmes d'IA générative pour créer du contenu audio et visuel original.",
-    longDescription: "Ce projet personnel visait à explorer les capacités des modèles d'IA générative modernes. J'ai expérimenté avec des architectures comme les GANs et les Transformers pour la génération d'images et de courtes séquences audio, en me concentrant sur la compréhension des hyperparamètres et l'évaluation de la qualité des sorties.",
-    imageUrl: "https://via.placeholder.com/350x250/007bff/ffffff?text=Generative+AI", // Thumbnail
-    imageUrlLarge: "https://via.placeholder.com/800x450/007bff/ffffff?text=Generative+AI+Detail", // Larger image for detail page
-    date: "Mars 2024 - Mai 2024",
-    context: "Projet personnel de veille technologique et d'apprentissage autodidacte.",
-    technologies: ["Python", "PyTorch", "Librosa (Audio)", "Matplotlib", "Jupyter Notebook", "Git"],
-    tags: ["IA Générative", "Python", "Pytorch", "Audio", "Image", "Deep Learning"],
+    id: 'proj-eduTrackAi', // Keep this ID unique
+    title: "Detection automatic de présence et d'intrusion",
+    shortDescription: "Solution innovante de reconnaissance faciale capable d’identifier automatiquement les élèves présents, absents ou inattendus à partir d’une simple photo",
+    longDescription: "Dans le cadre d’un concours étudiant de trois mois à la Presidency University de Bangalore (Inde), nous avons conçu une application de reconnaissance faciale destinée à automatiser le suivi de présence en milieu scolaire. Le système s’appuie sur la technologie de face encoding pour mémoriser les visages enregistrés et identifier en temps réel les élèves présents, absents ou non autorisés via une image ou un flux vidéo. Le back-end, développé en Python avec les bibliothèques face_recognition et OpenCV, est relié à un front-end en React optimisé pour l'affichage dynamique des résultats. Pensée pour être intégrée à une caméra de sécurité, cette solution améliore à la fois la gestion administrative et la sécurité des établissements. Ce projet nous a permis de remporter la première place du concours universitaire",
+    imageUrl: edutrackAiImage,
+    imageUrlLarge: edutrackAiImage, 
+    date: "Fevrier 2025 - Avril 2025",
+    context: "Concours de projet libre étudiant à la Presidency University à Bengalore ",
+    technologies: ["Python", "Flask", "Face-Encoding","React","PostGresSQL","Espace d'embedding"],
+    tags: ["Traitement d'image", "Python", "Audio", "Image", "Reconnaissance Faciale"],
     strengths: [
-        "Compréhension approfondie des défis de l'IA générative.",
-        "Mise en œuvre de plusieurs architectures de modèles.",
-        "Analyse qualitative des résultats générés."
+        "Encodings et Embeddings en dimension élevé.",
+        "Gestion de base de données complexe.",
+        "Optimisation pour de l'utilisation en temps réel.",
+        "Interface utilisateur complète."
     ],
     futureImprovements: [
-        "Explorer des modèles de diffusion (Diffusion Models).",
-        "Améliorer le contrôle sur les générations (guidage par texte).",
-        "Créer une interface utilisateur simple pour tester les modèles."
+        "Intégrer un GPU pour un temps de calcul plus rapide",
+        "Sécuriser les données sensibles de la base de donnée.",
+        "Intégration directement dans le système de sécurité de l'école."
     ],
-    // githubLink: "#", // Add actual link if available
+     githubLink: "https://github.com/Lilian-Mayet/AI-Based-Attendance-System",
     // liveDemoLink: "#", // Add actual link if available
   },
   {
-    id: 'proj-search-engine',
-    title: "Moteur de Recherche Sémantique",
-    shortDescription: "Développement d'un moteur de recherche basé sur les embeddings pour trouver des informations pertinentes par similarité sémantique.",
-    longDescription: "Fatigué des recherches par mots-clés traditionnelles, j'ai construit un prototype de moteur de recherche utilisant des embeddings de phrases (Sentence Transformers) pour comprendre le sens des requêtes et des documents. Il permet de trouver des documents similaires même s'ils ne partagent pas exactement les mêmes mots.",
-    imageUrl: "https://via.placeholder.com/350x250/28a745/ffffff?text=Semantic+Search",
-    imageUrlLarge: "https://via.placeholder.com/800x450/28a745/ffffff?text=Semantic+Search+Detail",
-    date: "Décembre 2023 - Février 2024",
-    context: "Projet universitaire en groupe (Traitement Automatique du Langage Naturel).",
-    technologies: ["Python", "Sentence Transformers", "FAISS (Vector Index)", "Flask (API)", "React (Frontend basique)", "Docker"],
-    tags: ["NLP", "Embeddings", "Python", "Vector Database", "API", "Recherche"],
+    id: 'proj-semantic-web',
+    title: "Moteur de Recherche Sémantique Web",
+    shortDescription: "Un moteur de recherche contextuel combinant ontologie, RDF et word embeddings pour améliorer la pertinence des résultats.",
+    longDescription: "Dans le cadre d’un projet universitaire à la Presidency University (Inde), j’ai développé un moteur de recherche sémantique combinant le Web sémantique (ontologie, RDF, SPARQL) avec des modèles de word embeddings (Word2Vec, GloVe, BERT). L’objectif était de dépasser les recherches classiques par mots-clés en offrant des résultats plus pertinents, compréhensibles et adaptés au contexte de la requête utilisateur. Le moteur s’appuie sur une ontologie construite avec Protégé, une base de données RDF hébergée dans Apache Jena, et une interface intuitive en React, avec des résultats enrichis via SPARQL et embeddings.",
+    imageUrl: semanticWebImage,
+    imageUrlLarge: semanticWebImage,
+    date: "Novembre 2024 - Janvier 2025",
+    context: "Projet universitaire en groupe (Web Sémantique et Traitement du Langage Naturel).",
+    technologies: ["Python", "SPARQL", "Apache Jena", "React", "Protégé", "Word2Vec", "GloVe", "BERT", "RDF", "Turtle", "SPARQL", "Triplestore"],
+    tags: ["Web Sémantique", "NLP", "RDF", "SPARQL", "Ontologie", "Recherche", "Embeddings", "Knowledge Graph"],
     strengths: [
-        "Indexation et recherche vectorielle rapides.",
-        "API simple pour l'intégration.",
-        "Pertinence des résultats améliorée par rapport aux mots-clés seuls."
+        "Compréhension sémantique des requêtes grâce aux embeddings.",
+        "Modèle d'ontologie robuste pour structurer les concepts et relations.",
+        "Résultats enrichis et contextualisés grâce à l'utilisation de SPARQL."
     ],
     futureImprovements: [
-        "Intégrer des modèles d'embeddings plus larges et récents.",
-        "Optimiser l'indexation pour des datasets plus volumineux.",
-        "Ajouter des fonctionnalités de filtrage avancées."
-    ],
+        "Étendre l'ontologie à d'autres domaines spécialisés (santé, éducation…).",
+        "Améliorer l’interface utilisateur avec des visualisations de graphe sémantique.",
+        "Ajouter un module d’apprentissage automatique pour personnaliser les résultats selon l’utilisateur."
+    ]
      // githubLink: "#",
   },
   {
-    id: 'proj-smart-city-viz',
-    title: "Visualisation Trafic Urbain",
-    shortDescription: "Création d'une interface de visualisation interactive pour analyser les données simulées de trafic issues du projet Smart City.",
-    longDescription: "Dans le cadre de mon alternance chez NVIDIA, un besoin est apparu pour visualiser et analyser les données massives générées par la simulation de trafic urbain. J'ai développé une interface web interactive utilisant React et une librairie de data visualisation pour afficher les flux de trafic, les points de congestion et d'autres métriques clés sur une carte.",
-    imageUrl: "https://via.placeholder.com/350x250/ffc107/000000?text=City+Viz",
-     imageUrlLarge: "https://via.placeholder.com/800x450/ffc107/000000?text=City+Viz+Detail",
-    date: "En cours (depuis Avril 2024)",
-    context: "Projet interne lié à l'alternance chez NVIDIA (Projet Smart City).",
-    technologies: ["React", "JavaScript", "Deck.gl / Mapbox GL JS", "API REST", "CSS Modules", "Node.js (pour un serveur mock)"],
-    tags: ["Data Visualisation", "JavaScript", "React", "Simulation", "API", "Frontend"],
+    id: 'proj-esnn-enn',
+    title: "Nouvelle Architecture de Réseaux Neuronaux (ESNN / ENN)",
+    shortDescription: "Conception d'un nouveau type d’IA basé sur des connexions inter-réseaux et inter-couches pour améliorer la performance des réseaux neuronaux.",
+    longDescription: "Ce projet de recherche vise à proposer deux nouvelles architectures de réseaux neuronaux : les ESNN (Enriched Sub Neural Networks) et les ENN (Enriched Neural Networks). Les ESNN introduisent plusieurs sous-réseaux spécialisés connectés entre eux via des connexions inter-réseaux dynamiques, favorisant la spécialisation et le transfert riche de caractéristiques. Les ENN enrichissent les réseaux classiques (fully-connected ou CNN) en y ajoutant des connexions à longue portée entre couches éloignées, pour améliorer la propagation d’information et capturer des dépendances globales. Un algorithme d’optimisation adaptative est en cours de développement pour apprendre dynamiquement où placer ces connexions. L’objectif final est de publier un article scientifique décrivant cette architecture et ses performances.",
+    imageUrl: neuralNetImage,
+    imageUrlLarge: neuralNetImage,
+    date: "Avril 2025 - En cours",
+    context: "Projet de recherche personnel en intelligence artificielle, avec objectif de rédaction d’un article scientifique.",
+    technologies: ["Python", "PyTorch", "Optimisation évolutionnaire", "Réseaux neuronaux", "Recherche scientifique"],
+    tags: ["IA", "Réseaux Neuronaux", "Architecture", "Recherche", "Deep Learning", "Innovation", "Optimisation"],
     strengths: [
-        "Interface utilisateur intuitive et réactive.",
-        "Capacité à gérer et afficher de grands volumes de données géospatiales.",
-        "Intégration facile avec l'API de données de simulation."
+        "Approche innovante pour enrichir les architectures classiques.",
+        "Capacité à capturer des dépendances complexes et à longue portée.",
+        "Fondée sur une analyse comparative rigoureuse des architectures existantes."
     ],
     futureImprovements: [
-        "Ajouter des options de comparaison temporelle.",
-        "Intégrer des analyses statistiques directement dans l'interface.",
-        "Optimiser les performances de rendu pour des simulations encore plus grandes."
-    ],
-  },
+        "Implémentation complète de l’algorithme d’optimisation des connexions dynamiques.",
+        "Évaluation expérimentale sur benchmarks standards (CIFAR-10, IMDB…).",
+        "Soumission d’un article de recherche à une conférence IA (NeurIPS, ICLR…)."
+    ]
+},
+
    {
     id: 'proj-article-llm',
     title: "Article Scientifique sur LLM",
@@ -231,6 +235,20 @@ export const education = [
   },
   {
     id: 2,
+    degree: "Trimestre à l'étranger En Inde",
+    school: "Presidency University à Bengalore",
+    years: "2025 deuxième trimestre",
+    description: "Trois mois de cours de robotique, informatique, et managment dans une université prestigieuse Indienne"
+  },
+  {
+    id: 3,
+    degree: "Semestre à l'étranger à Prague",
+    school: "Université technique de Prague (CVUT)",
+    years: "2022 deuxième semestre",
+    description: "Semestre de cours sur les réseaux et la programmation orienté objet dans une unviversité tchèque"
+  },
+  {
+    id: 4,
     degree: "Baccalauréat Scientifique",
     school: "Lycée Jeanne d'Albret",
     years: "2017 - 2020",
@@ -240,7 +258,7 @@ export const education = [
 
 export const interests = [
     "Design & Création Artistique",
-    "Sports (Course à pied, Escalade)", 
+    "Sports (Volley, Judo)", 
     "Hackathons & Compétitions de code",
     "Engagement Associatif (Garage ISEP, BDE)",
     "Veille Technologique (IA, Cloud)"
