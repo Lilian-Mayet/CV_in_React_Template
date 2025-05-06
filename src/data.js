@@ -16,7 +16,10 @@ import {
   FaUsers, FaComments, FaLightbulb, FaHandshake
 } from 'react-icons/fa';
 
-import { GiFrance,GiSpain,BiWorld } from "react-icons/gi";
+import { GiFrance,GiSpain } from "react-icons/gi";
+import { BiWorld } from "react-icons/bi";
+import { IoIosGitNetwork } from "react-icons/io";
+import { LuImages } from "react-icons/lu";
 
 
 import {
@@ -107,7 +110,7 @@ export const skills = {
   dataScience: {
     title: "Data Science & IA",
     items: ["Algorithmes prédictifs & génératifs", "LLMs (Large Language Models)", "Embeddings", "Traitement d'images", "Vertex AI", "Préparation de données"],
-    icons: [ <SiTensorflow key="tf"/>, <SiPytorch key="pt"/>, <SiGooglegemini key="gemini" /> ] // Example icons
+    icons: [ <SiTensorflow key="tf"/>, <SiPytorch key="pt"/>, <SiGooglegemini key="gemini" />,<IoIosGitNetwork key="neuron"/> ,<LuImages key="img"/>]
   },
   programming: {
     title: "Programmation",
