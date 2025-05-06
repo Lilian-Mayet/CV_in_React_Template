@@ -251,6 +251,13 @@ export const education = [
   },
   {
     id: 4,
+    degree: "BAFA",
+    school: "UCPA",
+    years: "2020",
+    description: "BAFA spécialisation jeux en groupes, une vingtaine de colonie à mon actif"
+  },
+  {
+    id: 5,
     degree: "Baccalauréat Scientifique",
     school: "Lycée Jeanne d'Albret",
     years: "2017 - 2020",
