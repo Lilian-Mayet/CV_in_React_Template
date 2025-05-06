@@ -27,7 +27,7 @@ import profilePic from './assets/profile.jpg'; // Make sure you have this image
 import edutrackAiImage from './assets/edutrackAI_IMG.png'; 
 import semanticWebImage from './assets/WebBrowser.jpg'; 
 import neuralNetImage from './assets/neuralNet.png'; 
-import emotionRecImage from './assets/neuralNet.png'; 
+import emotionRecImage from './assets/emotionREC.png'; 
 
 export const profile = {
   name: "Lilian Mayet",
