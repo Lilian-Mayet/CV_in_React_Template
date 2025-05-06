@@ -3,7 +3,6 @@ import {
   FaPython,
   FaJava,
   FaJsSquare,
-  FaReact,
   FaHtml5,
   FaCss3Alt,
   FaLinkedin,
@@ -29,7 +28,7 @@ import {
   SiJupyter,
 } from 'react-icons/si';
 
-import { MdAnalytics } from 'react-icons/md'; // Optional alternative for Power BI
+
 // Replace with actual path to Lilian's photo
 import profilePic from './assets/profile.jpg'; // Make sure you have this image
 import edutrackAiImage from './assets/edutrackAI_IMG.png'; 
