@@ -33,8 +33,8 @@ function PortfolioHome() {
       <Hero />
       <About />
       <Experience />
-      <Skills />
       <Projects /> {/* This section contains links to /project/:id */}
+      <Skills />
       <Education />
       <Contact />
     </>

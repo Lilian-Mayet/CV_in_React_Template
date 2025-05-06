@@ -30,8 +30,9 @@ const Navbar = () => {
            {/* Add the leading '/' before the hash */}
           <li className="navbar-item"><HashLink smooth to="/#about" className="navbar-link">{('About')}</HashLink></li>
           <li className="navbar-item"><HashLink smooth to="/#experience" className="navbar-link">{('Experience')}</HashLink></li>
-          <li className="navbar-item"><HashLink smooth to="/#skills" className="navbar-link">{('Skills')}</HashLink></li>
           <li className="navbar-item"><HashLink smooth to="/#projects" className="navbar-link">{('Projects')}</HashLink></li>
+          <li className="navbar-item"><HashLink smooth to="/#skills" className="navbar-link">{('Skills')}</HashLink></li>
+          
           <li className="navbar-item"><HashLink smooth to="/#education" className="navbar-link">{('Education')}</HashLink></li>
           <li className="navbar-item"><HashLink smooth to="/#contact" className="navbar-link">{('Contact')}</HashLink></li>
         </ul>
