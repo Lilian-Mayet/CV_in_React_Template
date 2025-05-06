@@ -27,6 +27,7 @@ import profilePic from './assets/profile.jpg'; // Make sure you have this image
 import edutrackAiImage from './assets/edutrackAI_IMG.png'; 
 import semanticWebImage from './assets/WebBrowser.jpg'; 
 import neuralNetImage from './assets/neuralNet.png'; 
+import emotionRecImage from './assets/neuralNet.png'; 
 
 export const profile = {
   name: "Lilian Mayet",
@@ -204,27 +205,29 @@ export const projects = [
     githubLink: "https://github.com/Lilian-Mayet/Enriched-Neural-Network-Research",
 },
 
-   {
-    id: 'proj-article-llm',
-    title: "Article Scientifique sur LLM",
-    shortDescription: "Rédaction et contribution à un article scientifique détaillant les approches et résultats de l'utilisation de LLMs pour l'analyse comportementale.",
-    longDescription: "Suite aux travaux menés chez Capgemini Engineering sur l'analyse du comportement conducteur via LLM, nous avons formalisé nos méthodes, expériences et résultats dans un article scientifique. J'ai participé activement à la rédaction, à la génération des graphiques et à la mise en forme selon les standards de publication.",
-    imageUrl: "https://via.placeholder.com/350x250/dc3545/ffffff?text=Research+Paper",
-    imageUrlLarge: "https://via.placeholder.com/800x450/dc3545/ffffff?text=Research+Paper+Detail",
-    date: "Juin 2024 - Juillet 2024",
-    context: "Valorisation scientifique des travaux R&D menés durant l'alternance chez Capgemini Engineering.",
-    technologies: ["Latex", "Python (pour figures)", "LLMs (concepts)", "Méthodologie Scientifique", "Git"],
-    tags: ["Rédaction Scientifique", "LLM", "Data Science", "Publication", "Communication"],
-    strengths: [
-        "Formalisation claire d'une approche technique complexe.",
-        "Production de figures et tableaux de qualité.",
-        "Respect des contraintes de formatage et de soumission."
-    ],
-    futureImprovements: [
-        "Présenter les travaux lors d'une conférence.",
-        "Explorer les retours des relecteurs (si soumis) pour améliorer l'article.",
-    ],
-  },
+{
+  id: 'proj-emotion-recognition',
+  title: "Analyse Émotionnelle en Entretien Vidéo",
+  shortDescription: "Reconnaissance en temps réel des émotions d’un candidat via l’analyse faciale, vocale et sémantique durant un entretien d’embauche.",
+  longDescription: "Ce projet, nommé REC, vise à analyser le comportement d’une personne lors d’un entretien d’embauche à travers trois axes : les expressions faciales, le ton de la voix et le contenu de ses propos. Les émotions sont détectées en temps réel grâce à deux modèles de réseaux neuronaux développés from scratch : un pour les expressions faciales (entraîné sur plus de 28 000 images) et un autre pour les émotions vocales (utilisant MFCC, Chroma et contraste spectral). Une troisième analyse sémantique permet d’évaluer la positivité ou la négativité des phrases prononcées. À la fin de l’entretien, un rapport comportemental détaillé est généré, incluant l’évolution émotionnelle du candidat.",
+  imageUrl: emotionRecImage,
+  imageUrlLarge: emotionRecImage,
+  date: "Mars 2025",
+  context: "Projet universitaire réalisé en groupe dans le cadre d’un module d’intelligence artificielle appliquée.",
+  technologies: ["Python", "Réseaux Neuronaux", "TensorFlow", "Numpy", "OpenCV", "Librosa", "Grad-CAM", "MFCC", "Traitement du langage naturel", "React"],
+  tags: ["IA", "Reconnaissance d’émotions", "Deep Learning", "NLP", "Computer Vision", "Audio Analysis", "Psychologie comportementale"],
+  strengths: [
+      "Analyse multimodale combinant image, audio et texte.",
+      "Modèles de détection d’émotions créés from scratch avec explications visuelles via Grad-CAM.",
+      "Rapport automatique complet à la fin de l'entretien."
+  ],
+  futureImprovements: [
+      "Augmenter la précision via un ensemble de modèles plus vastes et des datasets plus diversifiés.",
+      "Adapter le système à des contextes différents : RH, psychologie, e-learning, etc.",
+      "Ajouter une analyse du langage corporel et de la posture via des détecteurs de squelette."
+  ],
+  githubLink : "https://github.com/Lilian-Mayet/Emotion_Recognition_For_Interview",
+}
 ];
 
 export const education = [
