@@ -6,7 +6,7 @@ import './Experience.css';
 const Experience = () => {
   return (
     <section id="experience" className="experience-section">
-      <h2>Expérience Professionnelle & Associative</h2>
+      <h2>Expériences Professionnelles & Associatives</h2>
       <div className="experience-timeline">
         {experiences.map((exp) => (
           <div key={exp.id} className="timeline-item">
