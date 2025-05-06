@@ -8,6 +8,7 @@ import {
   FaCss3Alt,
   FaLinkedin,
   FaGithub,
+  FaFileExcel,
   FaEnvelope,
   FaPhone,
   FaChartBar, // Added as an alternative for Power BI
@@ -15,7 +16,7 @@ import {
   FaUsers, FaComments, FaLightbulb, FaHandshake
 } from 'react-icons/fa';
 
-
+import { GiFrance,GiSpain,BiWorld } from "react-icons/gi";
 
 
 import {
@@ -127,7 +128,8 @@ export const skills = {
       <SiPytorch key="pt2" />,
       <SiTensorflow key="tf2" />,
       <SiJupyter key="jupyter" />,
-      <FaChartBar key="pbi" />, // Updated icon for Power BI
+      <FaChartBar key="pbi" />, 
+      <FaFileExcel key="Exc"/>
     ],
   },
 
@@ -146,6 +148,12 @@ export const skills = {
   languages: {
       title: "Langues",
       items: ["Français (Natif)", "Anglais (TOEIC 940 - C1)", "Espagnol (B1)"],
+      icons: [
+        <GiFrance key="french" />,
+        <GiSpain key="spanish" />,
+        <BiWorld key="world" />,
+
+      ],
   }
 };
 
