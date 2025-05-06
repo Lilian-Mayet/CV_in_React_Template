@@ -12,7 +12,11 @@ import {
   FaPhone,
   FaChartBar, // Added as an alternative for Power BI
   FaCode,     // Added as an alternative for C#
+  FaUsers, FaComments, FaLightbulb, FaHandshake
 } from 'react-icons/fa';
+
+
+
 
 import {
   SiTensorflow,
@@ -126,6 +130,19 @@ export const skills = {
       <FaChartBar key="pbi" />, // Updated icon for Power BI
     ],
   },
+
+  softSkills: { // La nouvelle section
+    title: "Compétences Relationnelles", // Texte direct
+    items: [
+        "Communication & Vulgarisation Scientifique",
+        "Sens du Contact & Relationnel",
+        "Travail d'équipe & Collaboration",
+        "Adaptabilité & Résolution de problèmes",
+        "Capacité d'Innovation"
+    ], // Textes directs
+    icons: [ <FaComments key="comm"/>, <FaUsers key="team"/>, <FaLightbulb key="innov"/>, <FaHandshake key="contact" /> ]
+  },
+
   languages: {
       title: "Langues",
       items: ["Français (Natif)", "Anglais (TOEIC 940 - C1)", "Espagnol (B1)"],

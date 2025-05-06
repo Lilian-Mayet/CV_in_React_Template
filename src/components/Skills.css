@@ -1,99 +1,135 @@
 /* src/components/Skills.css */
 .skills-section {
-    background-color: var(--card-bg); /* Example: white */
+  background-color: var(--card-bg); /* Example: white */
+   padding-bottom: 80px; /* Add more bottom padding if needed */
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
+display: grid;
+/* Ajustement potentiel : 3 colonnes max pour laisser plus d'espace ? */
+/* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustez si 5 catégories serrent trop */
+gap: 35px; /* Un peu plus d'espace */
+max-width: 1200px; /* Légèrement plus large pour 5 colonnes */
+margin: 0 auto;
 }
 
 .skill-category {
-  background-color: #f8f9fa; /* Light background for each category */
-  padding: 25px;
-  border-radius: 8px;
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.06); */
-   border: 1px solid var(--border-light);
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
+background-color: #f8f9fa;
+padding: 30px 25px; /* Un peu plus de padding vertical */
+border-radius: 10px; /* Coins plus arrondis */
+ border: 1px solid var(--border-light);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ display: flex; /* Utiliser flex pour mieux contrôler l'intérieur */
+ flex-direction: column; /* Organiser verticalement */
+ /* Optional: Add a subtle top border matching the theme */
+ /* border-top: 4px solid var(--primary-color); */
 }
 
 .skill-category:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transform: translateY(-5px); /* Effet de surélévation plus prononcé */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .skill-category h3 {
-  font-size: 1.3rem;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-  text-align: center;
-  position: relative;
-  padding-bottom: 10px;
+font-size: 1.3rem;
+color: var(--primary-color);
+margin-bottom: 15px; /* Moins d'espace avant les icônes/liste */
+text-align: center;
+position: relative;
+padding-bottom: 10px;
+font-weight: 600; /* Titre un peu plus gras */
 }
 
 .skill-category h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 3px;
-    background-color: var(--primary-color);
-    opacity: 0.5;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-color);
+  opacity: 0.6; /* Légèrement plus visible */
+  border-radius: 2px;
 }
 
 .skill-icons {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem; /* Adjust icon size */
-    color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 25px; /* Plus d'espace avant la liste */
+  font-size: 2.1rem; /* Icônes légèrement plus grandes */
+  color: var(--secondary-color);
+  line-height: 1; /* Assure que les icônes ne prennent pas trop de hauteur */
 }
 
 .skill-icons svg {
-    margin: 0 8px; /* Spacing between icons */
-     transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 8px;
+   transition: color 0.3s ease, transform 0.3s ease;
 }
 .skill-icons svg:hover {
-   color: var(--primary-color);
-   transform: scale(1.1);
+ color: var(--primary-color);
+ transform: scale(1.15); /* Zoom un peu plus grand */
 }
 
 
 .skill-category ul {
-  list-style: none; /* Remove default bullets */
-  padding: 0;
-  text-align: center;
+list-style: none;
+padding: 0;
+margin: 0; /* Retirer marge par défaut */
+text-align: left; /* *** Aligner le texte à gauche *** */
+flex-grow: 1; /* Permet à la liste de pousser le contenu vers le bas si nécessaire */
 }
 
 .skill-category li {
-  font-size: 1rem;
-  color: #495057;
-  margin-bottom: 10px;
-  padding: 5px 0;
-  /* border-bottom: 1px dashed #e0e0e0; Optional separator */
-  position: relative;
-   /* padding-left: 20px; /* Space for custom bullet */
+font-size: 0.95rem; /* Taille de police légèrement réduite pour la lisibilité */
+color: #495057;
+margin-bottom: 12px; /* Plus d'espacement entre items */
+padding: 5px 0px 5px 28px; /* *** Espace à gauche pour l'icône *** */
+position: relative; /* Pour positionner le pseudo-élément */
+line-height: 1.5; /* Meilleur espacement vertical du texte */
+transition: color 0.2s ease;
 }
-/* Optional: Custom bullet */
-/* .skill-category li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
-} */
+
+/* *** Ajout d'une icône/puce personnalisée avant chaque item *** */
+.skill-category li::before {
+content: '✓'; /* Ou '▹', '●', ou une icône font awesome si intégrée */
+position: absolute;
+left: 5px; /* Position de l'icône */
+top: 6px; /* Ajustement vertical fin */
+color: var(--primary-color); /* Couleur de l'icône */
+font-weight: bold;
+font-size: 1rem; /* Taille de l'icône */
+}
+
+/* Optionnel: Effet hover subtil sur les items */
+.skill-category li:hover {
+ color: var(--primary-color);
+ /* background-color: #e9ecef; */ /* Fond hover léger si désiré */
+}
+
 
 .skill-category li:last-child {
-    margin-bottom: 0;
-    border-bottom: none;
+  margin-bottom: 0;
 }
 
+/* Ajustement responsive si 5 colonnes deviennent trop serrées */
+@media (max-width: 1100px) {
+  .skills-grid {
+      /* Passer à 2 ou 3 colonnes plus tôt si nécessaire */
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+
 @media (max-width: 600px) {
-    .skills-grid {
-         grid-template-columns: 1fr; /* Stack skills on smaller screens */
-    }
+  .skills-grid {
+       grid-template-columns: 1fr; /* Stack skills */
+       gap: 25px; /* Moins d'espace en mode colonne */
+  }
+  .skill-category {
+      padding: 25px 20px; /* Moins de padding horizontal sur mobile */
+  }
+  .skill-category li {
+      font-size: 0.9rem; /* Police encore plus petite sur mobile */
+  }
 }
