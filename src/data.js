@@ -45,7 +45,7 @@ export const profile = {
 
 export const contactInfo = {
   phone: { text: '06 15 29 07 33', icon: <FaPhone />, link: 'tel:+33615290733' },
-  email: { text: 'Mayetlilian@gmail.com', icon: <FaEnvelope />, link: 'mailto:Mayetlilian@gmail.com' },
+  email: { text: 'Mayetlilian@gmail.com', icon: <FaEnvelope />, link: 'mailto:mayetlilian@gmail.com' },
   linkedin: { text: 'Lilian Mayet', icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/lilian-mayet-88b407219' }, 
    github: { text: 'lilian-m', icon: <FaGithub />, link: 'https://github.com/Lilian-Mayet' } 
 };
