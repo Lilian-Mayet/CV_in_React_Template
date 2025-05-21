@@ -6,13 +6,12 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaLinkedin,
-  FaGithub,
   FaFileExcel,
   FaEnvelope,
   FaPhone,
   FaChartBar, // Added as an alternative for Power BI
   FaCode,     // Added as an alternative for C#
-  FaUsers, FaComments, FaLightbulb, FaHandshake,FaBrain, FaChartLine, FaRocket 
+  FaUsers, FaComments, FaLightbulb, FaHandshake,FaBrain, FaRocket 
 } from 'react-icons/fa';
 
 import { GiFrance,GiSpain } from "react-icons/gi";
