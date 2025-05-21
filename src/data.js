@@ -80,8 +80,26 @@ export const about = {
 };
 
 export const experiences = [
+  {
+    id: 'exp-capgemini-generative-ai', 
+
+    title: "Chercheur en IA Générative pour la Santé (Projet R&D)",
+    company: "Capgemini",
+
+    years: "Mai 2025 - En cours", 
+
+    description: [
+      "Contribution majeure à un projet de recherche visant à surmonter le manque de données pour le diagnostic des maladies rares grâce à l'IA.",
+      "Développement et validation d'algorithmes d'IA générative (GANs, VAEs, Diffusion, ...) pour synthétiser des données de diagnostic médical réalistes et pertinentes.",
+      "Objectif : augmenter significativement les bases de données limitées pour permettre l'entraînement de modèles de détection plus précis et robustes.",
+      "Collaboration avec des équipes multidisciplinaires pour assurer la pertinence clinique et la validité des données générées.",
+      "Veille technologique active sur les avancées en IA générative et leurs applications dans le secteur de la santé."
+    ],
+    // Tags qui reflètent les compétences et le domaine
+    tags: ["IA Santé", "Recherche & Développement", "IA Générative", "Deep Learning", "Python", "Analyse de Données", "Diffusion"],
+  },
    {
-    id: 1,
+    id: 2,
     title: "Data Scientist Smart City (Alternant)",
     company: "NVIDIA",
     years: "2024 - 2025",
@@ -93,7 +111,7 @@ export const experiences = [
     tags: ["Machine Learning", "Simulation", "LLM", "Python", "Cloud"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Data Scientist R&D (Alternant)",
     company: "Capgemini Engineering",
     years: "2023 - 2024",
@@ -106,7 +124,7 @@ export const experiences = [
     tags: ["Data Science", "LLM", "Python", "Traitement de données", "R&D"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Président du Coder Lab",
     company: "Association Garage ISEP",
     years: "2023 - 2024",
@@ -117,7 +135,7 @@ export const experiences = [
     tags: ["Gestion de projet", "Management", "Animation", "Technique"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Trésorier BDE",
     company: "BDE ISEP",
     years: "2022 - 2024",
