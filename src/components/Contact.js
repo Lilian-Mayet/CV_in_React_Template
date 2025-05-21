@@ -1,7 +1,7 @@
 // src/components/Contact.js
 import React from 'react';
 import { contactInfo } from '../data'; // 'interests' n'est plus nécessaire ici
-import { FaCalculator, FaEnvelopeOpenText } from 'react-icons/fa'; // Pour le bouton Devis
+import { FaEnvelopeOpenText } from 'react-icons/fa'; // Pour le bouton Devis
 import './Contact.css';
 
 const Contact = () => {
@@ -67,7 +67,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <FaCalculator /> {/* Ou FaEnvelopeOpenText */}
+                    <FaEnvelopeOpenText/>
                     Demander un Devis sur Malt
                     {/* Si vous utilisez une clé de traduction : {t(contactInfo.quoteButtonTextKey)} */}
                 </a>
