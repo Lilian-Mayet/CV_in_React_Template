@@ -45,9 +45,10 @@ export const profile = {
 
 export const contactInfo = {
   phone: { text: '06 15 29 07 33', icon: <FaPhone />, link: 'tel:+33615290733' },
-  email: { text: 'Mayetlilian@gmail.com', icon: <FaEnvelope />, link: 'mailto:mayetlilian@gmail.com' },
-  linkedin: { text: 'Lilian Mayet', icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/lilian-mayet-88b407219' }, 
-   github: { text: 'lilian-m', icon: <FaGithub />, link: 'https://github.com/Lilian-Mayet' } 
+  email: { text: 'Mayetlilian@gmail.com', icon: <FaEnvelope />, link: 'mailto:Mayetlilian@gmail.com' },
+  linkedin: { text: 'Lilian Mayet', icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/lilian-mayet/' },
+  maltProfileUrl: "https://www.malt.fr/profile/lilianmayet?q=data+scientist&maxPrice=215&sourceComponent=top_nav_search_results_unlogged&searchid=682da9e484af5e4f35e530e2", // <= REMPLACEZ CECI
+  quoteButtonTextKey: "contactRequestQuote"
 };
 
 export const about = {
