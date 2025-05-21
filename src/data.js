@@ -100,7 +100,7 @@ export const experiences = [
   },
    {
     id: 2,
-    title: "Data Scientist Smart City (Alternant)",
+    title: "Data Scientist Smart City",
     company: "NVIDIA",
     years: "2024 - 2025",
     description: [
@@ -112,8 +112,8 @@ export const experiences = [
   },
   {
     id: 3,
-    title: "Data Scientist R&D (Alternant)",
-    company: "Capgemini Engineering",
+    title: "Data Scientist R&D",
+    company: "Capgemini",
     years: "2023 - 2024",
     description: [
       "Analyse et classification temps réel du comportement conducteur via LLM.",
@@ -133,18 +133,7 @@ export const experiences = [
       "Organisation de workshops techniques pour renforcer les compétences des étudiants.",
     ],
     tags: ["Gestion de projet", "Management", "Animation", "Technique"],
-  },
-  {
-    id: 5,
-    title: "Trésorier BDE",
-    company: "BDE ISEP",
-    years: "2022 - 2024",
-    description: [
-      "Gestion budgétaire minutieuse des événements annuels et des associations.",
-      "Participation active à la direction pour améliorer la vie associative.",
-    ],
-    tags: ["Gestion financière", "Organisation", "Associatif"],
-  },
+  }
 ];
 
 export const skills = {
