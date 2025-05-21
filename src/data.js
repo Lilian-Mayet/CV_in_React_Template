@@ -65,6 +65,11 @@ export const about = {
       title: "Développement de Solutions Sur Mesure",
       text: "Capacité à traduire des besoins complexes en applications IA fonctionnelles, de la conception à l'intégration, en utilisant les technologies les plus adaptées."
     },
+        {
+      icon: <FaChartBar />, // Icône pour l'analyse et la décision
+      title: "Valorisation de Données & Aide à la Décision",
+      text: "J'analyse vos données pour en extraire des insights précieux, identifier des tendances et fournir des recommandations claires qui éclairent vos décisions stratégiques et opérationnelles."
+    },
     {
       icon: <FaUsers />, // Icon for collaboration/communication
       title: "Collaboration & Communication Efficace",
@@ -92,8 +97,7 @@ export const experiences = [
       "Contribution majeure à un projet de recherche visant à surmonter le manque de données pour le diagnostic des maladies rares grâce à l'IA.",
       "Développement et validation d'algorithmes d'IA générative (GANs, VAEs, Diffusion, ...) pour synthétiser des données de diagnostic médical réalistes et pertinentes.",
       "Objectif : augmenter significativement les bases de données limitées pour permettre l'entraînement de modèles de détection plus précis et robustes.",
-      "Collaboration avec des équipes multidisciplinaires pour assurer la pertinence clinique et la validité des données générées.",
-      "Veille technologique active sur les avancées en IA générative et leurs applications dans le secteur de la santé."
+      "Collaboration avec des équipes multidisciplinaires pour assurer la pertinence clinique et la validité des données générées."
     ],
     // Tags qui reflètent les compétences et le domaine
     tags: ["IA Santé", "Recherche & Développement", "IA Générative", "Deep Learning", "Python", "Analyse de Données", "Diffusion"],
