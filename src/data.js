@@ -12,7 +12,7 @@ import {
   FaPhone,
   FaChartBar, // Added as an alternative for Power BI
   FaCode,     // Added as an alternative for C#
-  FaUsers, FaComments, FaLightbulb, FaHandshake
+  FaUsers, FaComments, FaLightbulb, FaHandshake,FaBrain, FaChartLine, FaRocket 
 } from 'react-icons/fa';
 
 import { GiFrance,GiSpain } from "react-icons/gi";
@@ -51,8 +51,32 @@ export const contactInfo = {
 };
 
 export const about = {
-  summary: "Passionné par la Data Science et spécialisé en R&D, ma force réside dans ma compréhension approfondie du fonctionnement intrinsèque des algorithmes d'IA. Cette expertise me permet d'adapter et d'intégrer efficacement ces technologies à vos projets. Fort de mes expériences concrètes avec NVIDIA et Capgemini sur des simulations virtuelles réalistes et des systèmes intelligents d'aide à la conduite, je suis constamment à la recherche de solutions créatives et innovantes",
-  detailed: "Rigoureux, créatif et communicant, je suis à votre disposition pour transformer vos défis techniques en réalisations concrètes.Contactez-moi pour concrétiser ensemble vos projets."
+  // Summary can be a bit longer, more engaging
+  summary: "Passionné par l'intelligence artificielle et la transformation digitale, je mets mon expertise technique et mon esprit d'innovation au service de projets ambitieux. Mon objectif : concevoir des solutions IA sur mesure qui apportent une réelle valeur ajoutée à mes clients.",
+  // Break down the "detailed" part into key points for better readability
+  keyPoints: [
+    {
+      icon: <FaBrain />, // Icon for expertise/innovation
+      title: "Expertise en IA & Data Science",
+      text: "Solides compétences en Machine Learning, Deep Learning (LLMs, Vision, etc.) et analyse de données, acquises via des projets stimulants et une veille technologique constante."
+    },
+    {
+      icon: <FaCode />, // Icon for development/solutions
+      title: "Développement de Solutions Sur Mesure",
+      text: "Capacité à traduire des besoins complexes en applications IA fonctionnelles, de la conception à l'intégration, en utilisant les technologies les plus adaptées."
+    },
+    {
+      icon: <FaUsers />, // Icon for collaboration/communication
+      title: "Collaboration & Communication Efficace",
+      text: "Excellent relationnel, sens de l'écoute et capacité à vulgariser des concepts techniques pour une collaboration transparente et productive."
+    },
+    {
+      icon: <FaRocket />, // Icon for results/impact
+      title: "Orientation Résultats & Impact",
+      text: "Focus sur la création de solutions qui non seulement fonctionnent, mais qui génèrent également des résultats tangibles et un impact positif pour votre activité."
+    }
+    // Add more points if relevant
+  ]
 };
 
 export const experiences = [

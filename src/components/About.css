@@ -1,51 +1,125 @@
 /* src/components/About.css */
 .about-section {
-    background-color: var(--card-bg); /* White background for contrast */
-    padding: 80px 40px; /* More padding for a distinct section */
-    border-radius: 10px; /* Optional rounded corners */
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05); /* Subtle shadow */
-    margin-top: -50px; /* Overlap slightly with hero or previous section if desired */
-    position: relative; /* Needed for overlap */
-    z-index: 10; /* Ensure it's above gradient backgrounds */
+  background-color: #f8f9fa; /* Lighter background for this section */
+  padding: 80px 20px; /* Consistent padding */
+  /* Remove margin-top and z-index if you don't want overlap anymore */
+  /* margin-top: -50px; */
+  /* position: relative; */
+  /* z-index: 10; */
+}
+
+.about-container {
+  max-width: 1000px; /* Max width for the content area */
+  margin: 0 auto;
+  text-align: center; /* Center the main title and summary */
+}
+
+/* Optional: Style for a profile picture in this section */
+.about-profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 30px auto; /* Centered with space below */
+  border: 4px solid var(--card-bg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-section h2 {
+  /* Uses global h2 styling from App.css, no need to repeat unless overriding */
+  margin-bottom: 30px;
+}
+
+.about-summary {
+  font-size: 1.2rem; /* Slightly larger summary */
+  color: var(--text-dark); /* Darker for better readability */
+  line-height: 1.7;
+  margin: 0 auto 50px auto; /* Centered with more space below */
+  max-width: 750px; /* Limit width of summary for readability */
+  font-style: italic; /* Optional: make summary italic */
+  opacity: 0.9;
+}
+
+.about-keypoints-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax for desired card size */
+  gap: 30px;
+  text-align: left; /* Align text inside cards to the left */
+  margin-bottom: 40px; /* Space before potential CTA */
+}
+
+.keypoint-card {
+  background-color: var(--card-bg);
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center icon and title */
+  text-align: center; /* Center text within card */
+}
+
+.keypoint-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.keypoint-icon-container {
+  font-size: 2.5rem; /* Size of the icon */
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  /* Optional: background circle for icon */
+  /* background-color: #e9ecef; */
+  /* width: 70px; */
+  /* height: 70px; */
+  /* border-radius: 50%; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.keypoint-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.keypoint-card p {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  flex-grow: 1; /* Helps if cards have different text lengths and you want alignment */
+}
+
+/* Optional: CTA button specific to about section */
+.about-cta {
+  margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .about-section {
+      padding: 60px 15px;
   }
-  
-  .about-content {
-    max-width: 800px; /* Limit content width for readability */
-    margin: 0 auto; /* Center the content */
-    text-align: center;
+  .about-summary {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
   }
-  
-  .about-content .summary {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--primary-color); /* Use accent color for summary */
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+  .about-keypoints-grid {
+      /* Stack cards on smaller screens if desired */
+      /* grid-template-columns: 1fr; */
+      gap: 25px;
   }
-  
-  .about-content p {
-    font-size: 1rem;
-    color: var(--secondary-color); /* Slightly lighter text for details */
-    line-height: 1.8;
+  .keypoint-card {
+      padding: 20px;
   }
-  
-  /* Optional: Style for an image/graphic if you add one */
-  .about-graphic {
-      width: 150px;
-      height: 150px;
-      margin: 0 auto 2rem auto;
-      /* Add styling for the graphic */
+  .keypoint-icon-container {
+      font-size: 2.2rem;
   }
-  
-  @media (max-width: 768px) {
-      .about-section {
-          padding: 60px 20px;
-          margin-top: 0; /* Remove overlap on smaller screens */
-      }
-       .about-content .summary {
-          font-size: 1.1rem;
-       }
-       .about-content p {
-          font-size: 0.95rem;
-       }
+  .keypoint-card h3 {
+      font-size: 1.15rem;
   }
+}
