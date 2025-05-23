@@ -37,7 +37,7 @@ import emotionRecImage from './assets/emotionREC.png';
 
 export const profile = {
   name: "Lilian Mayet",
-  title: "Étudiant Ingénieur & Alternant Data Scientist",
+  title: "Ingénieur Data&IA scientist, Freelance",
   location: "Paris, France", // Example location
   image: profilePic,
 };
