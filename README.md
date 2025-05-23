@@ -61,9 +61,9 @@ yarn start
 
 
 This will open the project in your default web browser, usually at http://localhost:3000. The page will automatically reload if you make changes to the code.
-🛠️ Customization
+#### 🛠️ Customization
 This template is designed to be easily customized to fit your personal brand and content.
-1. Update Your Information (src/data.js)
+1. **Update Your Information (src/data.js)**
 The most important step is to update your personal information, experiences, skills, and projects. All this data is centralized in the src/data.js file.
 Open src/data.js.
 Modify the JavaScript objects:
@@ -94,20 +94,20 @@ export const projects = [
 ];
 
 
-2. Styling (CSS)
+2. **Styling (CSS)**
 Global Styles: Modify src/App.css for global styles, CSS variables (colors, fonts), and base element styling.
 Component Styles: Each component in src/components/ has its own corresponding CSS file (e.g., src/components/Navbar.css). Modify these files to change the appearance of specific sections.
 Favicon: Replace the favicon files in the public/ directory and update the links in public/index.html. Use a favicon generator for best results.
 
 
-🏗️ Building for Production
+### 🏗️ Building for Production
 To create an optimized build of your website for deployment:
 Using npm:
 npm run build
 Or using yarn:
 yarn build
 
-☁️ Deployment
+### ☁️ Deployment
 The build (or dist) folder is what you need to deploy.
 Recommended Host: Cloudflare Pages
 Cloudflare Pages is an excellent, free, and fast platform for hosting static sites and frontend applications like this React portfolio.
